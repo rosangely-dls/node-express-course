@@ -1,0 +1,18 @@
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    if (req.url === '/') {
+        res.write('Welcome to the Home Page');
+        res.end();
+    } else if (req.url === '/about') {
+        res.write('Welcome to the About Page');
+        res.end();
+    } else {
+        res.write('404 Page Not Found');
+        res.end();
+    }
+});
+
+server.listen(3000, () => {
+    console.log('Server is listening on port 3000...');
+});
