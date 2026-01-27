@@ -54,7 +54,7 @@ console.log(queryObject)
     result = result.sort(sortList)
   }
   else{
-    result = result.sort(createAt)
+    result = result.sort(createdAt)
   }
 
 if(fields){
